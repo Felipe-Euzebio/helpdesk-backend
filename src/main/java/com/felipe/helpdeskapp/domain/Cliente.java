@@ -8,7 +8,7 @@ import javax.persistence.OneToMany;
 
 import com.felipe.helpdeskapp.domain.enums.Perfil;
 
-@Entity(name = "clientes")
+@Entity(name = "cliente")
 public class Cliente extends Pessoa{
 
 	/**

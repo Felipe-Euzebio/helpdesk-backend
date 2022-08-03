@@ -15,11 +15,13 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.felipe.helpdeskapp.domain.enums.Perfil;
 
-@Entity(name = "pessoas")
+@Entity
+@Table(name = "pessoas")
 public abstract class Pessoa implements Serializable{
 
 	/**

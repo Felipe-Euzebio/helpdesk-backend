@@ -10,12 +10,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.felipe.helpdeskapp.domain.enums.Prioridade;
 import com.felipe.helpdeskapp.domain.enums.Status;
 
-@Entity(name = "chamados")
+@Entity
+@Table(name = "chamados")
 public class Chamado implements Serializable{
 	
 	/**
