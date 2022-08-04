@@ -12,9 +12,6 @@ import com.felipe.helpdeskapp.domain.enums.Perfil;
 @Entity(name = "tecnico")
 public class Tecnico extends Pessoa{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@JsonIgnore

@@ -20,9 +20,6 @@ import com.felipe.helpdeskapp.domain.enums.Status;
 @Table(name = "chamados")
 public class Chamado implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
