@@ -50,7 +50,7 @@ public class TecnicoService {
 		
 		Optional<Tecnico> obj = tecnicoRepository.findById(id);
 		
-		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado. Id: " + id));
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto Não Encontrado. Id: " + id));
 		
 	}
 
