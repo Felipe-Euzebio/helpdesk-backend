@@ -3,6 +3,7 @@ package com.felipe.helpdeskapp.services;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.felipe.helpdeskapp.domain.Chamado;
@@ -27,23 +28,26 @@ public class DBService {
 	@Autowired
 	private ChamadoRepository chamadoRepository;
 	
+	@Autowired
+	private BCryptPasswordEncoder encoder;
+	
 	public void instanciaDB() {
 		
-		Tecnico tecnico1 = new Tecnico(null, "Valdir Cezar", "381.880.360-99", "valdir@gmail.com", "123");
+		Tecnico tecnico1 = new Tecnico(null, "Valdir Cezar", "381.880.360-99", "valdir@gmail.com", encoder.encode("123"));
 		tecnico1.addPerfil(Perfil.ADMIN);
 		
-		Tecnico tecnico2 = new Tecnico(null, "Felipe Euzébio", "994.923.060-85", "felipe@gmail.com", "123");
+		Tecnico tecnico2 = new Tecnico(null, "Felipe Euzébio", "994.923.060-85", "felipe@gmail.com", encoder.encode("123"));
 		tecnico2.addPerfil(Perfil.ADMIN);
 		
-		Tecnico tecnico3 = new Tecnico(null, "José Rômulo", "325.293.170-20", "joseromulo@gmail.com", "123");
+		Tecnico tecnico3 = new Tecnico(null, "José Rômulo", "325.293.170-20", "joseromulo@gmail.com", encoder.encode("123"));
 		tecnico3.addPerfil(Perfil.ADMIN);
 		
 		
-		Cliente cliente1 = new Cliente(null, "Linus Torvalds", "507.326.810-57", "torvalds@gmail.com", "123");
+		Cliente cliente1 = new Cliente(null, "Linus Torvalds", "507.326.810-57", "torvalds@gmail.com", encoder.encode("123"));
 		
-		Cliente cliente2 = new Cliente(null, "Steve Jobs", "880.338.890-71", "stevejobs@gmail.com", "123");
+		Cliente cliente2 = new Cliente(null, "Steve Jobs", "880.338.890-71", "stevejobs@gmail.com", encoder.encode("123"));
 		
-		Cliente cliente3 = new Cliente(null, "James Gosling", "770.082.580-70", "jamesgosling@gmail.com", "123");
+		Cliente cliente3 = new Cliente(null, "James Gosling", "770.082.580-70", "jamesgosling@gmail.com", encoder.encode("123"));
 		
 		
 		Chamado chamado1 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 01", "Primeiro chamado", tecnico1, cliente1);
