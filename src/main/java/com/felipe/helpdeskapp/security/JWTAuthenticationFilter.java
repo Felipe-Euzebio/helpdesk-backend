@@ -88,6 +88,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
 
 	private CharSequence json() {
+		
 		long date = new Date().getTime();
 		return "{"
 				+ "\"timestamp\": " + date + ", " 
@@ -95,6 +96,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 				+ "\"error\": \"Não autorizado\", "
 				+ "\"message\": \"Email ou senha inválidos\", "
 				+ "\"path\": \"/login\"}";
+		
 	}
 	
 }
