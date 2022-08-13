@@ -14,13 +14,11 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.felipe.helpdeskapp.domain.dtos.CredenciaisDTO;
 
 //	Filtro de autenticação
-@CrossOrigin
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
 	//	Estratégia da autenticação
